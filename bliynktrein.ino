@@ -10,7 +10,7 @@
 //wifi instelingen
 char auth[] = "lbQNxJsI_j5gAbk4G_0Z75_3jKD0jYc8";
 char ssid[] = "***REMOVED***";
-char pass[] = "***REMOVED***";
+char pass[] = "";
 
 // MQTT-instellingen
 const char* mqttServer = "192.168.1.42";
