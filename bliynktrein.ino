@@ -16,7 +16,7 @@ char pass[] = "";
 const char* mqttServer = "192.168.1.42";
 const int mqttPort = 1883;
 const char* mqttUser = "maart";
-const char* mqttPassword = "Five";
+const char* mqttPassword = "";
 const char* clientID = "esp32_trein";
 
 // GPIO-definities
