@@ -18,6 +18,8 @@ Voor de trein:
 
 
 Instalatie schema:
+
+
 ![Afbeelding1](https://github.com/user-attachments/assets/280502ff-5222-44b1-aa33-a41e6af3328c)
 
 
@@ -31,6 +33,8 @@ Voor de slagboom
 
 
 instalatie schema:
+
+
 ![Afbeelding2](https://github.com/user-attachments/assets/97527deb-a451-4083-9abf-535014a7d9de)
 
 Algemeen
