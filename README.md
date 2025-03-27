@@ -54,3 +54,17 @@ Weerstanden:
 
 # youtube video:
 https://youtu.be/Fh8W_xxydbA
+
+# Blynk app
+![Afbeelding4](https://github.com/user-attachments/assets/f01737ed-76aa-479e-a961-ed1bea47fae9)
+
+ 	
+links bovenaan kan je zien wat dat de huidige snelheid is. Rechts is een lamp om te tonen als veilige modus actief is.
+
+
+De slider word gebruikt om de trein in beweging te brengen. De knop om de trein te doen stopen.
+
+De onderste lampen tonen welke lamp modus actief is.
+
+Met de knoppen kunnen deze gewijzigd worden.
+
