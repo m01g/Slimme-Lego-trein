@@ -3,7 +3,7 @@ Het project is een trein die ik kan aangestuurd worden via de Blynk-app. De trei
 
 Een leuke toevoeging is de LED-verlichting: witte LED’s aan de voorkant en rode aan de achterkant. Deze worden aangestuurd door een LDR in de trein. De trein stuurt de gemeten waarde via MQTT naar de Raspberry Pi, waardoor de spoorwegovergang ook verlicht kan worden.
 
-wat heb je nodig voor dit projeckt?
+#Wat heb je nodig voor dit projeckt?
 Voor de trein:
 1 lego trein aangedreven door een 9v motor
 1 esp32
@@ -15,6 +15,9 @@ Voor de trein:
 2 rode led’s
 1 0.1µf capacitor
 1 1µF capacitor
+instalatie schema:
+![Afbeelding1](https://github.com/user-attachments/assets/280502ff-5222-44b1-aa33-a41e6af3328c)
+
 
 Voor de slagboom
 1 Rapsberry pi (5)
@@ -23,6 +26,8 @@ Voor de slagboom
 1 led
 2 ultrasone sensors
 2 220Ω weerstanden voor de led’s 
+instalatie schema:
+![Afbeelding2](https://github.com/user-attachments/assets/97527deb-a451-4083-9abf-535014a7d9de)
 
 Algemeen
 Genoeg kabels
