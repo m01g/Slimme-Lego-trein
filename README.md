@@ -15,7 +15,9 @@ Voor de trein:
 2 rode led’s
 1 0.1µf capacitor
 1 1µF capacitor
-instalatie schema:
+
+
+Instalatie schema:
 ![Afbeelding1](https://github.com/user-attachments/assets/280502ff-5222-44b1-aa33-a41e6af3328c)
 
 
@@ -25,7 +27,9 @@ Voor de slagboom
 1 buzzer
 1 led
 2 ultrasone sensors
-2 220Ω weerstanden voor de led’s 
+2 220Ω weerstanden voor de led’s
+
+
 instalatie schema:
 ![Afbeelding2](https://github.com/user-attachments/assets/97527deb-a451-4083-9abf-535014a7d9de)
 
