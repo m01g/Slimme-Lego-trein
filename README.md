@@ -23,6 +23,14 @@ https://youtu.be/Fh8W_xxydbA
 - 1 0.1µF-condensator
 - 1 1µF-condensator
 
+### Weerstanden
+
+- 1 × 10KΩ voor de LDR 
+- 1 × 150Ω voor de transistor
+- 1 × 4K7Ω voor de LM317
+- 1 × 3K5Ω voor de LM317
+- 2 × 220Ω voor de LED’s
+
 **Installatieschema:**  
 ![Afbeelding1](https://github.com/user-attachments/assets/280502ff-5222-44b1-aa33-a41e6af3328c)
 
@@ -42,14 +50,6 @@ https://youtu.be/Fh8W_xxydbA
 
 - Voldoende bekabeling
 - Spoorweg
-
-### Overige Weerstanden
-
-- 1 × 10KΩ voor de LDR 
-- 1 × 150Ω voor de transistor
-- 1 × 4K7Ω voor de LM317
-- 1 × 3K5Ω voor de LM317
-- 2 × 220Ω voor de LED’s
 
 ## Blynk-app
 
