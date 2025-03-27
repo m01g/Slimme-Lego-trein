@@ -3,7 +3,7 @@ Het project is een trein die ik kan aangestuurd worden via de Blynk-app. De trei
 
 Een leuke toevoeging is de LED-verlichting: witte LED’s aan de voorkant en rode aan de achterkant. Deze worden aangestuurd door een LDR in de trein. De trein stuurt de gemeten waarde via MQTT naar de Raspberry Pi, waardoor de spoorwegovergang ook verlicht kan worden.
 
-# youtube video:
+# Youtube video:
 https://youtu.be/Fh8W_xxydbA
 
 
@@ -38,7 +38,7 @@ Voor de slagboom
 2 220Ω weerstanden voor de led’s
 
 
-instalatie schema:
+Instalatie schema:
 
 
 ![Afbeelding2](https://github.com/user-attachments/assets/97527deb-a451-4083-9abf-535014a7d9de)
