@@ -4,6 +4,8 @@ Het project is een trein die ik kan aangestuurd worden via de Blynk-app. De trei
 Een leuke toevoeging is de LED-verlichting: witte LED’s aan de voorkant en rode aan de achterkant. Deze worden aangestuurd door een LDR in de trein. De trein stuurt de gemeten waarde via MQTT naar de Raspberry Pi, waardoor de spoorwegovergang ook verlicht kan worden.
 
 #Wat heb je nodig voor dit projeckt?
+
+
 Voor de trein:
 1 lego trein aangedreven door een 9v motor
 1 esp32
