@@ -10,13 +10,13 @@
 //wifi instelingen
 char auth[] = "lbQNxJsI_j5gAbk4G_0Z75_3jKD0jYc8";
 char ssid[] = "***REMOVED***";
-char pass[] = "";
+char pass[] = "password";
 
 // MQTT-instellingen
 const char* mqttServer = "192.168.1.42";
 const int mqttPort = 1883;
 const char* mqttUser = "maart";
-const char* mqttPassword = "";
+const char* mqttPassword = "password";
 const char* clientID = "esp32_trein";
 
 // GPIO-definities
@@ -50,8 +50,10 @@ void callback(char* topic, byte* payload, unsigned int length) {
   Serial.println(message);
 
   // Update Blynk
+  // Op deze lijn stuur ik de inkomende MQTT berichten door naar Blynk op mijn telefoon. dit is om te kunnen zien in welke modus de trein zit. Dit is vooral voor debuggen.
   Blynk.virtualWrite(V0, "MQTT bericht ontvangen: " + String(topic) + " - " + message);
 
+//Hier onder worden de MQTT berichten opgeslagen.
   if (String(topic) == "esp32/slagboom/sensor") {
     if (message == "true") {
       slagboom_toe = true;
@@ -72,6 +74,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
   }
 }
 
+// Hier onder worden de Blynk instellingen opgeslagen  
 // BLYNK-functie voor motorcontrole
 BLYNK_WRITE(V1) {
   gewenstesnelheid = param.asInt();
@@ -124,7 +127,7 @@ void setup() {
   digitalWrite(ledPin2, LOW);
 }
 
-// MQTT herverbinden
+// Als de MQTT verbinding is verbroken, dan wordt er opnieuw verbinding gemaakt en wordt er gesubscribed op de juiste topics. 
 void reconnect() {
   while (!client.connected()) {
     Serial.println("Verbinden met MQTT...");
@@ -141,6 +144,7 @@ void reconnect() {
 }
 
 void loop() {
+  // Dit wordt gebruikt zodat het proces actief blijft.
   if (!client.connected()) {
     reconnect();
   }
@@ -154,9 +158,11 @@ void loop() {
     Serial.println(ldrValue);
 
     Blynk.virtualWrite(V4, ldrValue);  // Stuur LDR naar Blynk (Virtuele Pin V4)
+    // Hier wordt de LDR waarde doorgestuurd naar de slagboom via MQTT.
     client.publish("esp32/trein/ldr", String(ldrValue).c_str(), true);
   }
 
+//Als de overschrijvingen-modus niet actief is wordt de status van de knop op de Blynk app gebruikt om de lampen aan of uit te zetten.
   if (blynklampenoverscrijven == true) {
     digitalWrite(ledPin1, blynklampen);
     digitalWrite(ledPin2, blynklampen);
@@ -169,7 +175,9 @@ void loop() {
       Blynk.setProperty(V5, "color", "#000000");
       Blynk.virtualWrite(V5, 0);
     }
-  } else {
+  } // Als de overschrijving-modus niet actief is wordt de LDR sensor gebruikt.
+  // Je kan ook zien welke modus actief is op de Blynk app door de led’s op de app.
+  else {
     Blynk.setProperty(V6, "color", "#000000");
     Blynk.virtualWrite(V6, 255);
     digitalWrite(ledPin1, Lampen);
@@ -182,9 +190,9 @@ void loop() {
       Blynk.virtualWrite(V5, 0);
     }
   }
-
+ // Hier wordt er gereageerd op de MQTT berichten als de slagboom toe is.
   if (slagboom_toe == true) {
-    // Activeren van slagboom.
+    // Als de slagboom toe is dan wordt er gekeken of dat de gewenste snelheid lager is dan de veilige snelheid. Als deze sneller, dan wordt deze op de veilige snelheid ingesteld.
     if (gewenstesnelheid < veiligeSnelheid) {
       motorSpeed = gewenstesnelheid;
        motorWrite();
@@ -196,7 +204,7 @@ void loop() {
     Blynk.virtualWrite(V7, 255);
    
   }
-  // Normale werking.
+  // Als de slagboom open is, dan blijft de snelheid op de gewenste snelheid
   if (slagboom_toe == false) {
     motorSpeed = gewenstesnelheid;
     Blynk.setProperty(V7, "color", "#000000");
@@ -206,6 +214,7 @@ void loop() {
 }
 
 void motorWrite() {
+  // De functie motorWrite wordt gebruikt voor de snelheid effectief in te stellen op de ingestelde snelheid en wordt weergegeven op Blynk
   analogWrite(motorPin, motorSpeed);
   Blynk.virtualWrite(V8, motorSpeed);
 }
