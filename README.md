@@ -3,6 +3,10 @@ Het project is een trein die ik kan aangestuurd worden via de Blynk-app. De trei
 
 Een leuke toevoeging is de LED-verlichting: witte LED’s aan de voorkant en rode aan de achterkant. Deze worden aangestuurd door een LDR in de trein. De trein stuurt de gemeten waarde via MQTT naar de Raspberry Pi, waardoor de spoorwegovergang ook verlicht kan worden.
 
+# youtube video:
+https://youtu.be/Fh8W_xxydbA
+
+
 # Wat heb je nodig voor dit projeckt?
 
 
@@ -51,9 +55,6 @@ Weerstanden:
 1 3k5Ω voor de LM317
 2 220Ω voor de led’s 
 
-
-# youtube video:
-https://youtu.be/Fh8W_xxydbA
 
 # Blynk app
 ![Afbeelding4](https://github.com/user-attachments/assets/f01737ed-76aa-479e-a961-ed1bea47fae9)
