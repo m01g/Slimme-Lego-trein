@@ -2,7 +2,7 @@
 #define BLYNK_TEMPLATE_NAME "user5@server.wyns.it"
 #define BLYNK_PRINT Serial
 
-// lybrary's inporteren
+// lybraries importeren
 #include <WiFi.h>
 #include <BlynkSimpleEsp32.h>
 #include <PubSubClient.h>
@@ -50,10 +50,10 @@ void callback(char* topic, byte* payload, unsigned int length) {
   Serial.println(message);
 
   // Update Blynk
-  // Op deze lijn stuur ik de inkomende MQTT berichten door naar Blynk op mijn telefoon. dit is om te kunnen zien in welke modus de trein zit. Dit is vooral voor debuggen.
+  // Op deze lijn stuur ik de inkomende MQTT berichten door naar Blynk op mijn telefoon. dit is om te kunnen zien in welke modus de trein zit. Dit is vooral om te debuggen.
   Blynk.virtualWrite(V0, "MQTT bericht ontvangen: " + String(topic) + " - " + message);
 
-//Hier onder worden de MQTT berichten opgeslagen.
+//Hieronder worden de MQTT berichten opgeslagen.
   if (String(topic) == "esp32/slagboom/sensor") {
     if (message == "true") {
       slagboom_toe = true;
@@ -74,7 +74,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
   }
 }
 
-// Hier onder worden de Blynk instellingen opgeslagen  
+// Hieronder worden de Blynk instellingen opgeslagen  
 // BLYNK-functie voor motorcontrole
 BLYNK_WRITE(V1) {
   gewenstesnelheid = param.asInt();
