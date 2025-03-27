@@ -1,5 +1,5 @@
 # PROJECT BESCHRIJVING
-Het project is een trein die ik kan aangestuurd worden via de Blynk-app. De trein staat in verbinding met de slagboom. Wanneer de ultrasone sensor bij de slagboom detecteert dat er een trein voorbijrijdt, sluiten de slagbomen. Dit wordt gecommuniceerd met de trein via MQTT, zodat de trein kan vertragen en met een veilige snelheid de spoorwegovergang kan passeren.
+Het project is een trein die kan aangestuurd worden via de Blynk-app. De trein staat in verbinding met de slagboom. Wanneer de ultrasone sensor bij de slagboom detecteert dat er een trein voorbijrijdt, sluiten de slagbomen. Dit wordt gecommuniceerd met de trein via MQTT, zodat de trein kan vertragen en met een veilige snelheid de spoorwegovergang kan passeren.
 
 Een leuke toevoeging is de LED-verlichting: witte LED’s aan de voorkant en rode aan de achterkant. Deze worden aangestuurd door een LDR in de trein. De trein stuurt de gemeten waarde via MQTT naar de Raspberry Pi, waardoor de spoorwegovergang ook verlicht kan worden.
 
