@@ -67,7 +67,9 @@ https://youtu.be/Fh8W_xxydbA
 # MQTT topics
 
 esp32/trein/ldr: hiermee verstuurd de trein de rauwe data van de LDR naar de slagboom 
+
 esp32/slagboom/lamp: hiermee wordt er naar de trein gestuurd of dat de lampen van de trein aan moeten
+
 esp32/slagboom/sensor: hiermee wordt er verstuurd of dat de trein voorbij de sensor is gereden. 
 
 
