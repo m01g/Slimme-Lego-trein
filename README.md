@@ -31,6 +31,14 @@ https://youtu.be/Fh8W_xxydbA
 - 1 0.1µF-condensator
 - 1 1µF-condensator
 
+### Overige Weerstanden
+
+- 1 × 10KΩ voor de LDR 
+- 1 × 150Ω voor de transistor
+- 1 × 4K7Ω voor de LM317
+- 1 × 3K5Ω voor de LM317
+- 2 × 220Ω voor de LED’s
+  
 - #### Berekening voor de LM317:
 ![Afbeelding5](https://github.com/user-attachments/assets/de749cce-fd42-481f-9227-e17026dd67f0)
 ![Afbeelding6](https://github.com/user-attachments/assets/9024e3d5-a93e-41ae-a8d3-74ec9fe70265)
@@ -55,13 +63,6 @@ https://youtu.be/Fh8W_xxydbA
 - Voldoende bekabeling
 - Spoorweg
 
-### Overige Weerstanden
-
-- 1 × 10KΩ voor de LDR 
-- 1 × 150Ω voor de transistor
-- 1 × 4K7Ω voor de LM317
-- 1 × 3K5Ω voor de LM317
-- 2 × 220Ω voor de LED’s
 
 # MQTT topics
 
